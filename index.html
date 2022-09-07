@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    
+    <link rel="icon" href="./image/LOGO-icon.jpg" type="image/gif" sizes="16x16">
+
+    <title>Shop Watch</title>
+    <link rel="stylesheet" href="./style.css">
+
+<body>
+    <div class="header-desktop text-white">
+        <div class="header-desktop__top">
+            <div class="d-flex">
+                <div class="top__info d-flex">
+                    <div class="info-address">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Cầu Giấy - Hà nội</span>
+                    </div>
+                    <div class="info-phone">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>0384787013</span>
+                    </div>
+                </div>
+                <div class="top__social-icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header-desktop__inner">
+            <div class="d-flex">
+                <div class="inner__logo">
+                    <img class="logo" src="./image/LOGO.jpg" alt="">
+                </div>
+                <div class="inner__search d-flex">
+                    <input type="text" placeholder="Tìm kiếm...">
+                    <button><i class="fa-solid fa-magnifying-glass text-white"></i></button>
+                </div>
+                <div class="inner__buy-product d-flex">
+                    <div class="buy product--like">
+                        <div class="like-icon"><i class="fa-solid fa-heart"></i></div>
+                        <span class="number-product num-like">0</span>
+                    </div>
+                    <div class="buy product--cart">
+                        <div class="cart-icon"><i class="fa-solid fa-cart-plus"></i></div>
+                        <span class="number-product num-cart">0</span>
+                        
+
+                        <div class="tooltip-cart">
+                            <div class="tooltip-cart__inner">
+                                <div class="noproduct text-black hide">
+                                    <p>chưa có sản phẩm trong giỏ hàng</p>
+                                </div>
+                                <div class="hasproduct d-flex selected hide">
+                                    <div class="product-list">
+                                    </div>
+                                    <div class="total-price text-center">
+                                        <div>Tổng thanh toán:</div>
+                                        <div class="tolal-pay text-black format-price"></div>
+                                    </div>
+                                    <div>
+                                        <button class="btn__view-cart text-white">XEM GIỎ HÀNG</button>
+                                    </div>
+                                    <div>
+                                        <button class="btn__view-pay text-white"> THANH TOÁN</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+
+
+                </div>
+            </div>
+        </div>
+        <!-- desktop_nav -->
+        <div class="header-desktop__nav">
+            <ul class="nav-list d-flex">
+                <li class="nav-item"><a href="#" class="text-white active"> Trang chủ </a> </li>
+                <li class="nav-item"><a href="#" class="text-white"> Giới thiệu </a> </li>
+                <li class="nav-item"><a href="#" class="text-white"> Đồng hồ nam </a> </li>
+                <li class="nav-item"><a href="#" class="text-white"> Đồng hồ nữ </a> </li>
+                <li class="nav-item"><a href="#" class="text-white"> Blogs </a> </li>
+                <li class="nav-item"><a href="#footer" class="text-white"> Liên hệ </a> </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Header mobile  -->
+    <div class="header-mobile d-flex">
+        <div class="header-mobile__icon-bar" onclick="openMobileNav(this)">
+            <div class="bar1 "></div>
+            <div class="bar2 "></div>
+            <div class="bar3 "></div>
+        </div>
+        <div class="header-mobile__logo ">
+            <a href="# "><img src="./image/LOGO.jpg" alt=" "></a>
+        </div>
+        <div class="header-mobile__cart text-white">
+            <div class="cart-icon"><i class="fa-solid fa-cart-plus"></i></div>
+            <span class="number-product num-cart">0</span>
+            <!-- Tool tip -->
+            <div class="mobile__tooltip-cart hidden">
+                <div class="tooltip-cart__inner">
+                    <div class="noproduct text-black hide">
+                        <p>chưa có sản phẩm trong giỏ hàng</p>
+                    </div>
+                    <div class="hasproduct d-flex selected hide">
+                        <div class="product-list">
+                        </div>
+                        <div class="total-price text-center">
+                            <div>Tổng thanh toán:</div>
+                            <div class="tolal-pay text-black format-price"></div>
+                        </div>
+                        <div>
+                            <button class="btn__view-cart text-white">XEM GIỎ HÀNG</button>
+                        </div>
+                        <div>
+                            <button class="btn__view-pay text-white"> THANH TOÁN</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="over-lay">
+        <div class="close text-white">&times;</div>
+    </div>
+    <div class="header-mobile__nav">
+        <ul class="nav-bar">
+            <li class="nav-item nav-search d-flex">
+                <input type="text" placeholder="Tìm kiếm...">
+                <button><i class="fa-solid fa-magnifying-glass text-white"></i></button>
+            </li>
+            <li class="nav-item"><a href="#" class="text-black"> Trang chủ </a> </li>
+            <li class="nav-item"><a href="#" class="text-black"> Giới thiệu </a> </li>
+            <li class="nav-item"><a href="#" class="text-black"> Đồng hồ nam </a> </li>
+            <li class="nav-item"><a href="#" class="text-black"> Đồng hồ nữ </a> </li>
+            <li class="nav-item"><a href="#" class="text-black"> Blogs </a> </li>
+            <li class="nav-item"><a href="#" class="text-black"> Liên hệ </a> </li>
+            <li class="nav-item"><a href="#" class="text-black"> Đăng nhập </a> </li>
+            <li class="nav-item nav-social">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </li>
+        </ul>
+    </div>
+
+    <div class="sec-banner text-white">
+        <div class="banner__slider-control d-middle-y d-flex">
+            <i class="fa-solid fa-circle-chevron-left control"></i>
+            <i class="fa-solid fa-circle-chevron-right control"></i>
+        </div>
+        <div class="banner__slider-wrap d-flex">
+
+        </div>
+        <div class="banner__slider-pagination d-flex d-middle-x">
+        </div>
+    </div>
+    <!-- Content -->
+    <div id="content">
+        <!-- TREND MALE FEMALE -->
+        <div class="sec-trend d-flex text-white">
+            <div class="col col-half">
+                <div class="trend__male">
+                    <div class="trend__bg-img"></div>
+                    <div class="trend__text d-middle-y">
+                        <h3 class="title">Xu hướng năm 2022</h3>
+                        <p></p>
+                        <h1 class="text-header">ĐỒNG HỒ NAM</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-half">
+                <div class="trend__female">
+                    <div class="trend__bg-img"></div>
+                    <div class="trend__text d-middle-y">
+                        <h3 class="title">Xu hướng năm 2022</h3>
+                        <p></p>
+                        <h1 class="text-header">ĐỒNG HỒ NỮ</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--BEST SALE -->
+        <div class="sec-best-sale">
+            <div class="best-sale__title d-flex">
+                <h2>Sản phẩm bán chạy</h2>
+            </div>
+            <div class="relative">
+                <div class="d-flex best-sale__inner">
+
+                </div>
+                <div class="best-sale--control d-middle-y d-flex text-gray">
+                    <i class="fa-solid fa-angle-left prev"></i>
+                    <i class="fa-solid fa-angle-right next"></i>
+                </div>
+            </div>
+
+        </div>
+        <!--REND CLASSIC MODAL -->
+        <div class="sec-trend d-flex text-white">
+            <div class="col col-half">
+                <div class="trend__classic">
+                    <div class="trend__bg-img"></div>
+                    <div class="trend__text d-middle-y">
+                        <h1 class="text-header">CỔ ĐIỂN</h1>
+                        <h3 class="title">Đa dạng về phong cách, kiểu dáng, màu sắc, kích cỡ…</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-half">
+                <div class="trend__modern">
+                    <div class="trend__bg-img"></div>
+                    <div class="trend__text d-middle-y">
+                        <h1 class="text-header">SMART WATCH</h1>
+                        <h3 class="title">Đa dạng về phong cách, kiểu dáng, màu sắc, kích cỡ…</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--ALL PRODUCT -->
+        <div class="sec-all-product">
+            <ul class="all-product__nav-list d-flex">
+                <li class="all-product--item active product-all">
+                    <h2>Tất cả sản phẩm</h2>
+                </li>
+                <li class="all-product--item product-popular">
+                    <h2>Sản phẩm phổ biến</h2>
+                </li>
+                <li class="all-product--item product-sale">
+                    <h2>Sản phẩm khuyến mại</h2>
+                </li>
+                <li class="all-product--item product-new">
+                    <h2>Sản phẩm mới</h2>
+                </li>
+            </ul>
+            <div class="all-product__inner d-flex">
+
+            </div>
+        </div>
+        <!--BLOG -->
+        <div class="sec-blog">
+            <div class="d-flex">
+                <div class="col col-third">
+                    <div class="blog__img">
+                        <img src="./image/slider3.jpg" alt="">
+                    </div>
+                    <div class="bog__title">
+                        <h3><a href="#">Chiếc đồng hồ của những CEO quyền lực</a></h3>
+                    </div>
+                    <div class="blog__desc">
+                        <p>Đối với một số doanh nhân, một chiếc đồng hồ đeo tay không chỉ là ... </p>
+                    </div>
+                </div>
+                <div class="col col-third">
+                    <div class="blog__img">
+                        <img src="./image/slider5.jpg" alt="">
+                    </div>
+                    <div class="bog__title">
+                        <h3><a href="#">12 chiếc đồng hồ dành cho nữ hot nhất năm 2021</a></h3>
+                    </div>
+                    <div class="blog__desc">
+                        <p>Công nghiệp sản xuất đồng hồ sang trọng có dấu hiệu chững lại trong hai ... </p>
+                    </div>
+                </div>
+                <div class="col col-third">
+                    <div class="blog__img">
+                        <img src="./image/slider2.jpg" alt="">
+                    </div>
+                    <div class="bog__title">
+                        <h3><a href="#">10 thương hiệu đồng hồ cao cấp nhất năm 2021</a></h3>
+                    </div>
+                    <div class="blog__desc">
+                        <p>1. Audemars Piguet Được thành lập vào năm 1875 bởi Jules-Louis Audemars và Edward-Auguste
+                            Piguet, ... </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--CONTACT -->
+        <div class="sec-contact d-flex">
+            <div class="col col-half contact__header">
+                <h2>ĐĂNG KÍ NHẬN THÔNG TIN</h2>
+            </div>
+            <div class="col col-half contact__form d-flex">
+                <input type="text" placeholder="Email...">
+                <button class="text-white">Đăng ký</button>
+            </div>
+        </div>
+    </div>
+
+
+    <footer id="footer text-white" id="footer">
+        <div class="d-flex">
+            <div class="col col-quater footer__info text-white">
+                <h3>THÔNG TIN LIÊN HỆ</h3>
+                <div class="footer__info--address d-flex">
+                    <div class="icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="text">
+                        Cầu Giấy - Hà Nội
+                    </div>
+                </div>
+                <div class="footer__info--phone d-flex">
+                    <div class="icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="text">
+                        0384787013
+                    </div>
+                </div>
+                <div class="footer__info--mail d-flex">
+                    <div class="icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="text">
+                        tamphi67@gmail.com
+                    </div>
+                </div>
+                <div class="footer__info--icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+            </div>
+            <div class="col col-quater footer__nav text-white">
+                <h3>LIÊN KẾT</h3>
+                <ul class="footer__nav-list">
+                    <li class="footer__nav-item"><a href="#">Đồng hồ nam</a></li>
+                    <li class="footer__nav-item"><a href="#">Đồng hồ nữ</a></li>
+                    <li class="footer__nav-item"><a href="#">Blogs</a></li>
+                    <li class="footer__nav-item"><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="col col-quater footer__help text-white">
+                <h3>HỖ TRỢ</h3>
+                <ul class="footer__nav-list">
+                    <li class="footer__nav-item"><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li class="footer__nav-item"><a href="#">Hướng dẫn thanh toán</a></li>
+                    <li class="footer__nav-item"><a href="#">Chính sách bảo hành</a></li>
+                    <li class="footer__nav-item"><a href="#">Chính sách đổi trả</a></li>
+                    <li class="footer__nav-item"><a href="#">Tư vấn khách hàng</a></li>
+                </ul>
+            </div>
+            <div class="col col-quater footer__download-app text-white">
+                <h3>TẢI ỨNG DỤNG TRÊN</h3>
+                <p>Ứng dụng Mona Watch hiện có sẵn trên Google Play & App Store. Tải nó ngay.</p>
+                <p class="footer__app--logo">
+                    <a href="#"><img src="./image/LOGO1.jpg" alt=""></a>
+                </p>
+                <p class="footer__app--logo">
+                    <a href="#"><img src="./image/LOGO2.jpg" alt=""></a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js">
+    </script>
+    
+</body> 
+
+</html>
